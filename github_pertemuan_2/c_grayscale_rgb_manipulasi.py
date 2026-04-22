@@ -2,22 +2,22 @@ import numpy as np
 import matplotlib.pyplot as plt 
 
 #user entries
-nama_file = 'kucing'
+nama_file = 'gambar\\kucing'
 
 #main program
-array_gambar2 = plt.imread(nama_file + '.jpeg')
-# plt.imshow(array_gambar2)
+gambar = plt.imread(nama_file + '.jpeg')
+# plt.imshow(gambar)
 plt.figure(1)
-plt.imshow(array_gambar2[:,:,0], cmap='gray')
+plt.imshow(gambar[:,:,0], cmap='gray')
 plt.figure(2)
-plt.imshow(array_gambar2[:,:,1], cmap='gray')
+plt.imshow(gambar[:,:,1], cmap='gray')
 plt.figure(3)
-plt.imshow(array_gambar2[:,:,2], cmap='gray')
+plt.imshow(gambar[:,:,2], cmap='gray')
 
 plt.figure(4)
-plt.imshow(array_gambar2[:,:,:])
+plt.imshow(gambar[:,:,:])
 
-gambar = array_gambar2.copy()
+gambar = gambar.copy()
 gambar[:,:,0] = 0 #warna merah dinolkan
 plt.figure(5)
 plt.imshow(gambar[:,:,:])
